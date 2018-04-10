@@ -50,7 +50,7 @@ public class Entity0 extends Entity
             {
                 if (distanceTable[i][j] < 10)
                 {    
-                    System.out.print("   ");
+                    System.out.print(" less than 10  ");
                 }
                 else if (distanceTable[i][j] < 100)
                 {

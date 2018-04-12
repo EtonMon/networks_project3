@@ -1,0 +1,1053 @@
+Network Simulator v1.0
+Enter trace level (>= 0): [0] 3
+Will the link change (1 = Yes, 0 = No): [0] 0
+Enter random seed: [random] 9
+toLayer2(): source=0 dest=1
+             costs: 0 1 3 7
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=2
+             costs: 0 1 3 7
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=3
+             costs: 0 1 3 7
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=1 dest=0
+             costs: 1 0 1 999
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=1 dest=2
+             costs: 1 0 1 999
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=0
+             costs: 3 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=1
+             costs: 3 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=3
+             costs: 3 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=3 dest=0
+             costs: 7 999 2 0
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=3 dest=2
+             costs: 7 999 2 0
+toLayer2(): Scheduling arrival of packet.
+
+main(): event received.  t=4.503767269428785, node=0
+  src=2, dest=0, contents=[3, 1, 0, 2]
+toLayer2(): source=0 dest=1
+             costs: 0 1 3 5
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=2
+             costs: 0 1 3 5
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=3
+             costs: 0 1 3 5
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4 999
+   2| 999  3 999
+   3| 999  5  7
+
+main(): event received.  t=5.4216466415687865, node=0
+  src=3, dest=0, contents=[7, 999, 2, 0]
+toLayer2(): source=0 dest=1
+             costs: 0 1 3 5
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=2
+             costs: 0 1 3 5
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=3
+             costs: 0 1 3 5
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4 999
+   2| 999  3  9
+   3| 999  5  7
+
+main(): event received.  t=6.220506133390249, node=3
+  src=2, dest=3, contents=[3, 1, 0, 2]
+toLayer2(): source=3 dest=0
+             costs: 5 3 2 0
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=3 dest=2
+             costs: 5 3 2 0
+toLayer2(): Scheduling arrival of packet.
+         via
+ D3 |   0   2
+----+--------
+   0|   7   5
+   1| 999   3
+   2| 999   2
+
+main(): event received.  t=6.318616359588065, node=0
+  src=1, dest=0, contents=[1, 0, 1, 999]
+toLayer2(): source=0 dest=1
+             costs: 0 1 2 5
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=2
+             costs: 0 1 2 5
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=3
+             costs: 0 1 2 5
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4 999
+   2|  2  3  9
+   3| 999  5  7
+
+main(): event received.  t=6.326468196321248, node=1
+  src=2, dest=1, contents=[3, 1, 0, 2]
+toLayer2(): source=1 dest=0
+             costs: 1 0 1 3
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=1 dest=2
+             costs: 1 0 1 3
+toLayer2(): Scheduling arrival of packet.
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   4
+   2| 999   1
+   3| 999   3
+
+main(): event received.  t=7.571453962841311, node=1
+  src=0, dest=1, contents=[0, 1, 3, 7]
+toLayer2(): source=1 dest=0
+             costs: 1 0 1 3
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=1 dest=2
+             costs: 1 0 1 3
+toLayer2(): Scheduling arrival of packet.
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   4
+   2|   4   1
+   3|   8   3
+
+main(): event received.  t=7.897923936631799, node=2
+  src=0, dest=2, contents=[0, 1, 3, 7]
+toLayer2(): source=2 dest=0
+             costs: 3 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=1
+             costs: 3 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=3
+             costs: 3 1 0 2
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3 999 999
+   1|   4   1 999
+   3|  10 999   2
+
+main(): event received.  t=7.930848057321089, node=3
+  src=0, dest=3, contents=[0, 1, 3, 7]
+toLayer2(): source=3 dest=0
+             costs: 5 3 2 0
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=3 dest=2
+             costs: 5 3 2 0
+toLayer2(): Scheduling arrival of packet.
+         via
+ D3 |   0   2
+----+--------
+   0|   7   5
+   1|   8   3
+   2|  10   2
+
+main(): event received.  t=8.148486127487313, node=0
+  src=3, dest=0, contents=[5, 3, 2, 0]
+toLayer2(): source=0 dest=1
+             costs: 0 1 2 5
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=2
+             costs: 0 1 2 5
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=3
+             costs: 0 1 2 5
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3| 999  5  7
+
+main(): event received.  t=9.133712735529954, node=2
+  src=3, dest=2, contents=[7, 999, 2, 0]
+toLayer2(): source=2 dest=0
+             costs: 3 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=1
+             costs: 3 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=3
+             costs: 3 1 0 2
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3 999   9
+   1|   4   1 999
+   3|  10 999   2
+
+main(): event received.  t=9.364967991402994, node=2
+  src=1, dest=2, contents=[1, 0, 1, 999]
+toLayer2(): source=2 dest=0
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=1
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=3
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   9
+   1|   4   1 999
+   3|  10 999   2
+
+main(): event received.  t=9.76629037794496, node=2
+  src=0, dest=2, contents=[0, 1, 3, 5]
+toLayer2(): source=2 dest=0
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=1
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=3
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   9
+   1|   4   1 999
+   3|   8 999   2
+
+main(): event received.  t=9.995558279698928, node=1
+  src=2, dest=1, contents=[3, 1, 0, 2]
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   4
+   2|   4   1
+   3|   8   3
+
+main(): event received.  t=10.249938374216114, node=0
+  src=3, dest=0, contents=[5, 3, 2, 0]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3| 999  5  7
+
+main(): event received.  t=10.46915337007403, node=0
+  src=1, dest=0, contents=[1, 0, 1, 3]
+toLayer2(): source=0 dest=1
+             costs: 0 1 2 4
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=2
+             costs: 0 1 2 4
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=3
+             costs: 0 1 2 4
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=11.0426264659152, node=2
+  src=1, dest=2, contents=[1, 0, 1, 3]
+toLayer2(): source=2 dest=0
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=1
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=3
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   9
+   1|   4   1 999
+   3|   8   4   2
+
+main(): event received.  t=11.945889186474403, node=1
+  src=0, dest=1, contents=[0, 1, 3, 5]
+toLayer2(): source=1 dest=0
+             costs: 1 0 1 3
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=1 dest=2
+             costs: 1 0 1 3
+toLayer2(): Scheduling arrival of packet.
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   4
+   2|   4   1
+   3|   6   3
+
+main(): event received.  t=13.19414896965101, node=3
+  src=0, dest=3, contents=[0, 1, 3, 5]
+toLayer2(): source=3 dest=0
+             costs: 5 3 2 0
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=3 dest=2
+             costs: 5 3 2 0
+toLayer2(): Scheduling arrival of packet.
+         via
+ D3 |   0   2
+----+--------
+   0|   7   5
+   1|   8   3
+   2|  10   2
+
+main(): event received.  t=13.459979502672432, node=2
+  src=1, dest=2, contents=[1, 0, 1, 3]
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   9
+   1|   4   1 999
+   3|   8   4   2
+
+main(): event received.  t=13.819671629283624, node=2
+  src=3, dest=2, contents=[5, 3, 2, 0]
+toLayer2(): source=2 dest=0
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=1
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=3
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   8   4   2
+
+main(): event received.  t=14.0016579619574, node=0
+  src=2, dest=0, contents=[3, 1, 0, 2]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=15.254743023323185, node=3
+  src=2, dest=3, contents=[3, 1, 0, 2]
+         via
+ D3 |   0   2
+----+--------
+   0|   7   5
+   1|   8   3
+   2|  10   2
+
+main(): event received.  t=15.892223308825702, node=2
+  src=1, dest=2, contents=[1, 0, 1, 3]
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   8   4   2
+
+main(): event received.  t=16.164501957883452, node=3
+  src=0, dest=3, contents=[0, 1, 3, 5]
+         via
+ D3 |   0   2
+----+--------
+   0|   7   5
+   1|   8   3
+   2|  10   2
+
+main(): event received.  t=16.2979173763967, node=1
+  src=0, dest=1, contents=[0, 1, 3, 5]
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   4
+   2|   4   1
+   3|   6   3
+
+main(): event received.  t=16.43717669997504, node=2
+  src=3, dest=2, contents=[5, 3, 2, 0]
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   8   4   2
+
+main(): event received.  t=16.794362392632067, node=2
+  src=0, dest=2, contents=[0, 1, 3, 5]
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   8   4   2
+
+main(): event received.  t=17.73429901109096, node=0
+  src=2, dest=0, contents=[3, 1, 0, 2]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=18.220655138372116, node=2
+  src=0, dest=2, contents=[0, 1, 2, 5]
+toLayer2(): source=2 dest=0
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=1
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=3
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   8   4   2
+
+main(): event received.  t=18.354955899162128, node=1
+  src=0, dest=1, contents=[0, 1, 2, 5]
+toLayer2(): source=1 dest=0
+             costs: 1 0 1 3
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=1 dest=2
+             costs: 1 0 1 3
+toLayer2(): Scheduling arrival of packet.
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   4
+   2|   3   1
+   3|   6   3
+
+main(): event received.  t=19.056153275993953, node=0
+  src=1, dest=0, contents=[1, 0, 1, 3]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=19.08503726034337, node=1
+  src=2, dest=1, contents=[3, 1, 0, 2]
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   4
+   2|   3   1
+   3|   6   3
+
+main(): event received.  t=19.901513774149414, node=2
+  src=1, dest=2, contents=[1, 0, 1, 3]
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   8   4   2
+
+main(): event received.  t=20.12324827066272, node=3
+  src=0, dest=3, contents=[0, 1, 2, 5]
+toLayer2(): source=3 dest=0
+             costs: 5 3 2 0
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=3 dest=2
+             costs: 5 3 2 0
+toLayer2(): Scheduling arrival of packet.
+         via
+ D3 |   0   2
+----+--------
+   0|   7   5
+   1|   8   3
+   2|   9   2
+
+main(): event received.  t=20.331810693847356, node=0
+  src=3, dest=0, contents=[5, 3, 2, 0]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=20.466975411374197, node=0
+  src=2, dest=0, contents=[2, 1, 0, 2]
+toLayer2(): source=0 dest=1
+             costs: 0 1 2 4
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=2
+             costs: 0 1 2 4
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=3
+             costs: 0 1 2 4
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=22.219075965472467, node=0
+  src=2, dest=0, contents=[2, 1, 0, 2]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=22.79436692723638, node=0
+  src=3, dest=0, contents=[5, 3, 2, 0]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=23.703942584195218, node=3
+  src=2, dest=3, contents=[3, 1, 0, 2]
+         via
+ D3 |   0   2
+----+--------
+   0|   7   5
+   1|   8   3
+   2|   9   2
+
+main(): event received.  t=23.765062328352073, node=0
+  src=2, dest=0, contents=[2, 1, 0, 2]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=23.878332628312073, node=1
+  src=2, dest=1, contents=[2, 1, 0, 2]
+toLayer2(): source=1 dest=0
+             costs: 1 0 1 3
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=1 dest=2
+             costs: 1 0 1 3
+toLayer2(): Scheduling arrival of packet.
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   3
+   2|   3   1
+   3|   6   3
+
+main(): event received.  t=24.506452562989104, node=3
+  src=0, dest=3, contents=[0, 1, 2, 5]
+         via
+ D3 |   0   2
+----+--------
+   0|   7   5
+   1|   8   3
+   2|   9   2
+
+main(): event received.  t=25.58585022986566, node=2
+  src=3, dest=2, contents=[5, 3, 2, 0]
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   8   4   2
+
+main(): event received.  t=25.91950603181317, node=1
+  src=2, dest=1, contents=[2, 1, 0, 2]
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   3
+   2|   3   1
+   3|   6   3
+
+main(): event received.  t=25.939908502202655, node=2
+  src=1, dest=2, contents=[1, 0, 1, 3]
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   8   4   2
+
+main(): event received.  t=26.251766700028362, node=0
+  src=1, dest=0, contents=[1, 0, 1, 3]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=26.390072606124363, node=1
+  src=0, dest=1, contents=[0, 1, 2, 5]
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   3
+   2|   3   1
+   3|   6   3
+
+main(): event received.  t=26.92997665278238, node=1
+  src=2, dest=1, contents=[2, 1, 0, 2]
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   3
+   2|   3   1
+   3|   6   3
+
+main(): event received.  t=27.172217942172455, node=2
+  src=0, dest=2, contents=[0, 1, 2, 5]
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   8   4   2
+
+main(): event received.  t=28.3668416828785, node=1
+  src=0, dest=1, contents=[0, 1, 2, 4]
+toLayer2(): source=1 dest=0
+             costs: 1 0 1 3
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=1 dest=2
+             costs: 1 0 1 3
+toLayer2(): Scheduling arrival of packet.
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   3
+   2|   3   1
+   3|   5   3
+
+main(): event received.  t=28.723497167180184, node=0
+  src=2, dest=0, contents=[2, 1, 0, 2]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=29.70045606784612, node=1
+  src=0, dest=1, contents=[0, 1, 2, 4]
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   3
+   2|   3   1
+   3|   5   3
+
+main(): event received.  t=30.82410230734201, node=3
+  src=0, dest=3, contents=[0, 1, 2, 4]
+toLayer2(): source=3 dest=0
+             costs: 5 3 2 0
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=3 dest=2
+             costs: 5 3 2 0
+toLayer2(): Scheduling arrival of packet.
+         via
+ D3 |   0   2
+----+--------
+   0|   7   5
+   1|   8   3
+   2|   9   2
+
+main(): event received.  t=31.16800734120117, node=0
+  src=2, dest=0, contents=[2, 1, 0, 2]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=31.788702536917224, node=0
+  src=1, dest=0, contents=[1, 0, 1, 3]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=32.26872067123202, node=3
+  src=2, dest=3, contents=[2, 1, 0, 2]
+toLayer2(): source=3 dest=0
+             costs: 4 3 2 0
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=3 dest=2
+             costs: 4 3 2 0
+toLayer2(): Scheduling arrival of packet.
+         via
+ D3 |   0   2
+----+--------
+   0|   7   4
+   1|   8   3
+   2|   9   2
+
+main(): event received.  t=32.56002869790909, node=2
+  src=1, dest=2, contents=[1, 0, 1, 3]
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   8   4   2
+
+main(): event received.  t=34.82063626834791, node=3
+  src=2, dest=3, contents=[2, 1, 0, 2]
+         via
+ D3 |   0   2
+----+--------
+   0|   7   4
+   1|   8   3
+   2|   9   2
+
+main(): event received.  t=34.96111100339121, node=0
+  src=3, dest=0, contents=[5, 3, 2, 0]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=35.01028614734417, node=3
+  src=0, dest=3, contents=[0, 1, 2, 4]
+         via
+ D3 |   0   2
+----+--------
+   0|   7   4
+   1|   8   3
+   2|   9   2
+
+main(): event received.  t=35.39213407818443, node=2
+  src=3, dest=2, contents=[5, 3, 2, 0]
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   8   4   2
+
+main(): event received.  t=35.80516863390069, node=1
+  src=2, dest=1, contents=[2, 1, 0, 2]
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   3
+   2|   3   1
+   3|   5   3
+
+main(): event received.  t=36.389560878517116, node=2
+  src=0, dest=2, contents=[0, 1, 2, 4]
+toLayer2(): source=2 dest=0
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=1
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=3
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   7   4   2
+
+main(): event received.  t=38.82615262397757, node=3
+  src=2, dest=3, contents=[2, 1, 0, 2]
+         via
+ D3 |   0   2
+----+--------
+   0|   7   4
+   1|   8   3
+   2|   9   2
+
+main(): event received.  t=39.42867445910221, node=2
+  src=0, dest=2, contents=[0, 1, 2, 4]
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   7   4   2
+
+main(): event received.  t=40.13344882048267, node=0
+  src=3, dest=0, contents=[4, 3, 2, 0]
+toLayer2(): source=0 dest=1
+             costs: 0 1 2 4
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=2
+             costs: 0 1 2 4
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=0 dest=3
+             costs: 0 1 2 4
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=40.27290695766678, node=1
+  src=2, dest=1, contents=[2, 1, 0, 2]
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   3
+   2|   3   1
+   3|   5   3
+
+main(): event received.  t=40.502921193918255, node=0
+  src=1, dest=0, contents=[1, 0, 1, 3]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=40.588033030259936, node=2
+  src=3, dest=2, contents=[5, 3, 2, 0]
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   7   4   2
+
+main(): event received.  t=42.67546600033617, node=1
+  src=2, dest=1, contents=[2, 1, 0, 2]
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   3
+   2|   3   1
+   3|   5   3
+
+main(): event received.  t=43.278478263522025, node=3
+  src=2, dest=3, contents=[2, 1, 0, 2]
+         via
+ D3 |   0   2
+----+--------
+   0|   7   4
+   1|   8   3
+   2|   9   2
+
+main(): event received.  t=44.010121187741504, node=1
+  src=0, dest=1, contents=[0, 1, 2, 4]
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   3
+   2|   3   1
+   3|   5   3
+
+main(): event received.  t=44.30504548597244, node=0
+  src=2, dest=0, contents=[2, 1, 0, 2]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=44.619129378624066, node=2
+  src=0, dest=2, contents=[0, 1, 2, 4]
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   7
+   1|   4   1   5
+   3|   7   4   2
+
+main(): event received.  t=45.24422513194515, node=3
+  src=0, dest=3, contents=[0, 1, 2, 4]
+         via
+ D3 |   0   2
+----+--------
+   0|   7   4
+   1|   8   3
+   2|   9   2
+
+main(): event received.  t=46.42480425170393, node=3
+  src=2, dest=3, contents=[2, 1, 0, 2]
+         via
+ D3 |   0   2
+----+--------
+   0|   7   4
+   1|   8   3
+   2|   9   2
+
+main(): event received.  t=48.07575297812242, node=3
+  src=2, dest=3, contents=[2, 1, 0, 2]
+         via
+ D3 |   0   2
+----+--------
+   0|   7   4
+   1|   8   3
+   2|   9   2
+
+main(): event received.  t=48.07879649246931, node=2
+  src=3, dest=2, contents=[4, 3, 2, 0]
+toLayer2(): source=2 dest=0
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=1
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+toLayer2(): source=2 dest=3
+             costs: 2 1 0 2
+toLayer2(): Scheduling arrival of packet.
+
+           via
+ D2 |   0   1   3
+----+------------
+   0|   3   2   6
+   1|   4   1   5
+   3|   7   4   2
+
+main(): event received.  t=50.363751732892915, node=0
+  src=1, dest=0, contents=[1, 0, 1, 3]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=54.52900054519616, node=1
+  src=2, dest=1, contents=[2, 1, 0, 2]
+
+         via
+ D1 |   0   2
+----+--------
+   0|   1   3
+   2|   3   1
+   3|   5   3
+
+main(): event received.  t=55.31826552420595, node=0
+  src=2, dest=0, contents=[2, 1, 0, 2]
+
+           via
+ D0 |   1   2   3
+----+------------
+   1|  1  4  10
+   2|  2  3  9
+   3|  4  5  7
+
+main(): event received.  t=57.12898102376282, node=3
+  src=2, dest=3, contents=[2, 1, 0, 2]
+         via
+ D3 |   0   2
+----+--------
+   0|   7   4
+   1|   8   3
+   2|   9   2
+Simulator terminated at t=57.12898102376282, no packets in medium.

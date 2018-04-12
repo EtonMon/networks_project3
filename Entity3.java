@@ -23,7 +23,7 @@ public class Entity3 extends Entity
         distanceTable[3][2] = 999;
         distanceTable[3][3] = 0;
 
-        int src = 0;
+        int src = 3;
         int dest = 0;
         int[] neighbors = {0, 2};
 
@@ -89,7 +89,7 @@ public class Entity3 extends Entity
         }
 
         if(hasTableChanged == true) {
-            int src = 0;
+            int src = 3;
             int dest = 0;
             int[] neighbors = {0, 2};
 

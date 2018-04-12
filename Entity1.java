@@ -111,6 +111,7 @@ public class Entity1 extends Entity
                 NetworkSimulator.toLayer2(outpkt);
             }
         }
+        printDT();
     }
     
     public void linkCostChangeHandler(int whichLink, int newCost)

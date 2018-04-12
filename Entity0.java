@@ -110,7 +110,7 @@ public class Entity0 extends Entity
                 NetworkSimulator.toLayer2(outpkt);
             }
         }
-
+        printDT();
 
     }
     
@@ -130,11 +130,7 @@ public class Entity0 extends Entity
             System.out.print("   " + i + "|");
             for (int j = 1; j < NetworkSimulator.NUMENTITIES; j++)
             {
-                if (distanceTable[i][j] < 10)
-                {    
-                    System.out.print(" less than 10  ");
-                }
-                else if (distanceTable[i][j] < 100)
+                if (distanceTable[i][j] < 100)
                 {
                     System.out.print("  ");
                 }

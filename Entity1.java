@@ -22,6 +22,28 @@ public class Entity1 extends Entity
         distanceTable[3][1] = 999;
         distanceTable[3][2] = 999;
         distanceTable[3][3] = 999;
+
+        int src = 0;
+        int dest = 0;
+        int[] neighbors = {0,2};
+
+        //Grab MinCosts
+        int[] mincost = {999,999,999,999};
+        int minval = 999;
+        for (int i = 0; i < 4; i++) {
+            for(int j = 0; j < 4; j++){
+                if(distanceTable[i][j] < minval){
+                    minval = distanceTable[i][j];
+                }
+            }
+            mincost[i] = minval;
+        }
+        //send to neighbors
+        for (int i = 0; i < 2; i++) {
+            dest = neighbors[i];
+            Packet outpkt = new Packet(src, dest, mincost);
+            NetworkSimulator.toLayer2(outpkt);
+        }
     }
     
     // Handle updates when a packet is received.  Students will need to call

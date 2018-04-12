@@ -31,6 +31,7 @@ public class Entity2 extends Entity
     // details.
     public void update(Packet p)
     {
+        //dest: 0, 1, 3
     }
     
     public void linkCostChangeHandler(int whichLink, int newCost)

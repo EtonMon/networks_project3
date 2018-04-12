@@ -40,6 +40,7 @@ public class Entity0 extends Entity
         for(int i = 0; i < 3; i++){
             dest = neighbors[i];
             Packet outpkt = new Packet(src, dest, mincost);
+            NetworkSimulator.toLayer2(outpkt);
         }
 
 

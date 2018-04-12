@@ -69,8 +69,18 @@ public class Entity0 extends Entity
             int src = 0;
             int dest = 0;
             int[] neighbors = {1, 2, 3};
+
             //Grab MinCosts
-            int[] mincost = {distanceTable[0][0], distanceTable[1][1], distanceTable[2][2], distanceTable[3][3]};
+            int[] mincost = {999,999,999,999};
+            int minval = 999;
+            for (int i = 0; i < 4; i++) {
+                for(int j = 0; j < 4; j++){
+                    if(distanceTable[i][j] < minval){
+                        minval = distanceTable[i][j];
+                    }
+                }
+                mincost[i] = minval;
+            }
             //send to neighbors
             for (int i = 0; i < 3; i++) {
                 dest = neighbors[i];

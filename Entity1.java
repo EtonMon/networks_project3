@@ -1,3 +1,5 @@
+//Chase Deets (chd5hq) & Ethan Trinh (ext8jv)
+
 public class Entity1 extends Entity
 {    
     private int[][] distanceTable;

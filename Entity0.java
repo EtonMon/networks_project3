@@ -1,3 +1,5 @@
+//Chase Deets (chd5hq) & Ethan Trinh (ext8jv)
+
 public class Entity0 extends Entity
 {    
     private int[][] distanceTable;
@@ -21,7 +23,7 @@ public class Entity0 extends Entity
         distanceTable[3][1] = 999;
         distanceTable[3][2] = 999;
         distanceTable[3][3] = 7;
-        System.out.println("hello");
+
         int src = 0;
         int dest = 0;
         int[] neighbors = {1, 2, 3};

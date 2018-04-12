@@ -29,8 +29,9 @@ public class Entity2 extends Entity
 
         //Grab MinCosts
         int[] mincost = {999,999,999,999};
-        int minval = 999;
+
         for (int i = 0; i < 4; i++) {
+            int minval = 999;
             for(int j = 0; j < 4; j++){
                 if(distanceTable[i][j] < minval){
                     minval = distanceTable[i][j];
@@ -95,8 +96,9 @@ public class Entity2 extends Entity
 
             //Grab MinCosts
             int[] mincost = {999,999,999,999};
-            int minval = 999;
+
             for (int i = 0; i < 4; i++) {
+                int minval = 999;
                 for(int j = 0; j < 4; j++){
                     if(distanceTable[i][j] < minval){
                         minval = distanceTable[i][j];

@@ -6,17 +6,17 @@ public class Entity1 extends Entity
     public Entity1()
     {
         distanceTable = new int[4][4];
-        distanceTable[0][0] = 999;
+        distanceTable[0][0] = 1;
         distanceTable[0][1] = 999;
         distanceTable[0][2] = 999;
         distanceTable[0][3] = 999;
-        distanceTable[1][0] = 1;
+        distanceTable[1][0] = 999;
         distanceTable[1][1] = 0;
-        distanceTable[1][2] = 1;
+        distanceTable[1][2] = 999;
         distanceTable[1][3] = 999;
         distanceTable[2][0] = 999;
         distanceTable[2][1] = 999;
-        distanceTable[2][2] = 999;
+        distanceTable[2][2] = 1;
         distanceTable[2][3] = 999;
         distanceTable[3][0] = 999;
         distanceTable[3][1] = 999;

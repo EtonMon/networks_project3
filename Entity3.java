@@ -6,7 +6,7 @@ public class Entity3 extends Entity
     public Entity3()
     {
         distanceTable = new int[4][4];
-        distanceTable[0][0] = 999;
+        distanceTable[0][0] = 7;
         distanceTable[0][1] = 999;
         distanceTable[0][2] = 999;
         distanceTable[0][3] = 999;
@@ -16,11 +16,11 @@ public class Entity3 extends Entity
         distanceTable[1][3] = 999;
         distanceTable[2][0] = 999;
         distanceTable[2][1] = 999;
-        distanceTable[2][2] = 999;
+        distanceTable[2][2] = 2;
         distanceTable[2][3] = 999;
-        distanceTable[3][0] = 7;
+        distanceTable[3][0] = 999;
         distanceTable[3][1] = 999;
-        distanceTable[3][2] = 2;
+        distanceTable[3][2] = 999;
         distanceTable[3][3] = 0;
     }
     

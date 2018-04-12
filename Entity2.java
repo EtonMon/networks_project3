@@ -6,22 +6,22 @@ public class Entity2 extends Entity
     public Entity2()
     {
         distanceTable = new int[4][4];
-        distanceTable[0][0] = 999;
+        distanceTable[0][0] = 3;
         distanceTable[0][1] = 999;
         distanceTable[0][2] = 999;
         distanceTable[0][3] = 999;
         distanceTable[1][0] = 999;
-        distanceTable[1][1] = 999;
+        distanceTable[1][1] = 1;
         distanceTable[1][2] = 999;
         distanceTable[1][3] = 999;
-        distanceTable[2][0] = 3;
-        distanceTable[2][1] = 1;
+        distanceTable[2][0] = 999;
+        distanceTable[2][1] = 999;
         distanceTable[2][2] = 0;
-        distanceTable[2][3] = 2;
+        distanceTable[2][3] = 999;
         distanceTable[3][0] = 999;
         distanceTable[3][1] = 999;
         distanceTable[3][2] = 999;
-        distanceTable[3][3] = 999;
+        distanceTable[3][3] = 2;
     }
     
     // Handle updates when a packet is received.  Students will need to call

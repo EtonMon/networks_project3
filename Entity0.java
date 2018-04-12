@@ -31,6 +31,39 @@ public class Entity0 extends Entity
     public void update(Packet p)
     {        
         //dest: 1, 2, 3
+        int source = p.getSource();
+        int costToSource = distanceTable[source][source];
+        boolean hasTableChanged = false;
+        
+        // Iterate through rows of distance table (Dest)
+        for(int dest; dest<distanceTable.length;dest++){
+            int[] row = distanceTable[dest];
+
+            // Only want to update dest min costs for dest other than source.
+            // We already know cost to source via source.
+            if(source!=dest){
+
+                // Iterate through dest row
+                for(int via; via<row.length;via++){
+
+                    // Get min cost of dest via source
+                    int pktMinCost = p.getMincost(dest);
+
+                    // Get current cost of dest via source
+                    int currMinCost = row[via];
+
+                    // Total cost to dest via source
+                    int totalCost = pktMinCost+costToSource;
+
+                    // Only want to update via for source and if the total 
+                    // cost is less than what we currently have stored.
+                    if(source==via && (totalCost)<currMinCost){
+                        hasTableChanged = true;
+                        row[via] = totalCost;
+                    }
+                }
+            }
+        }
     }
     
     public void linkCostChangeHandler(int whichLink, int newCost)

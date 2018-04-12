@@ -36,7 +36,7 @@ public class Entity0 extends Entity
         boolean hasTableChanged = false;
         
         // Iterate through rows of distance table (Dest)
-        for(int dest; dest<distanceTable.length;dest++){
+        for(int dest=0; dest<distanceTable.length;dest++){
             int[] row = distanceTable[dest];
 
             // Only want to update dest min costs for dest other than source.
@@ -44,7 +44,7 @@ public class Entity0 extends Entity
             if(source!=dest){
 
                 // Iterate through dest row
-                for(int via; via<row.length;via++){
+                for(int via=0; via<row.length;via++){
 
                     // Get min cost of dest via source
                     int pktMinCost = p.getMincost(dest);

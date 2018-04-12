@@ -32,6 +32,63 @@ public class Entity1 extends Entity
     public void update(Packet p)
     {
         //dest: 0, 2
+        int source = p.getSource();
+        int costToSource = distanceTable[source][source];
+        boolean hasTableChanged = false;
+
+        // Iterate through rows of distance table (Dest)
+        for(int dest=0; dest<distanceTable.length;dest++){
+            int[] row = distanceTable[dest];
+
+            // Only want to update dest min costs for dest other than source.
+            // We already know cost to source via source.
+            if(source!=dest){
+
+                // Iterate through dest row
+                for(int via=0; via<row.length;via++){
+
+                    // Get min cost of dest via source
+                    int pktMinCost = p.getMincost(dest);
+
+                    // Get current cost of dest via source
+                    int currMinCost = row[via];
+
+                    // Total cost to dest via source
+                    int totalCost = pktMinCost+costToSource;
+
+                    // Only want to update via for source and if the total
+                    // cost is less than what we currently have stored.
+                    if(source==via && (totalCost)<currMinCost){
+                        hasTableChanged = true;
+                        row[via] = totalCost;
+                    }
+                }
+            }
+        }
+
+        if(hasTableChanged == true) {
+            int src = 0;
+            int dest = 0;
+            int[] neighbors = {0,2};
+
+            //Grab MinCosts
+            int[] mincost = {999,999,999,999};
+            int minval = 999;
+            for (int i = 0; i < 4; i++) {
+                for(int j = 0; j < 4; j++){
+                    if(distanceTable[i][j] < minval){
+                        minval = distanceTable[i][j];
+                    }
+                }
+                mincost[i] = minval;
+            }
+            //send to neighbors
+            for (int i = 0; i < 2; i++) {
+                dest = neighbors[i];
+                Packet outpkt = new Packet(src, dest, mincost);
+                NetworkSimulator.toLayer2(outpkt);
+            }
+        }
     }
     
     public void linkCostChangeHandler(int whichLink, int newCost)

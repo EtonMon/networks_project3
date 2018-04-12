@@ -29,7 +29,7 @@ public class Entity0 extends Entity
     // the packet correctly.  Read the warning in NetworkSimulator.java for more
     // details.
     public void update(Packet p)
-    {        
+    {
         //dest: 1, 2, 3
         int source = p.getSource();
         int costToSource = distanceTable[source][source];
@@ -64,6 +64,19 @@ public class Entity0 extends Entity
                 }
             }
         }
+        int src = 0;
+        int dest = 0;
+        int[] neighbors = {1, 2, 3};
+        //Grab MinCosts
+        int[] mincost = {distanceTable[0][0], distanceTable[1][1], distanceTable[2][2], distanceTable[3][3]};
+        //send to neighbors
+        for(int i = 0; i < 3; i++){
+            dest = neighbors[i];
+            Packet outpkt = new Packet(src, dest, mincost);
+            NetworkSimulator.toLayer2(outpkt);
+        }
+
+
     }
     
     public void linkCostChangeHandler(int whichLink, int newCost)
